@@ -1,0 +1,16 @@
+TMP36   KEYWORD1
+
+setVCC    KEYWORD2
+
+getVCC    KEYWORD2
+
+setPort    KEYWORD2
+
+getPort    KEYWORD2
+
+getReading    KEYWORD2
+
+getVoltage    KEYWORD2
+
+getTemperature    KEYWORD2
+
