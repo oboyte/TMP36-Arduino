@@ -1,6 +1,7 @@
 # Arduino Temperature Sensor Library (TMP36)
 
 This is a simple library used to simplify retrieving data from the TMP36 temperature sensor that comes along with the Arduino Starterkit. Note that this library only works with the Arduino framework, as it depends on Arduino functions. <br />
+This does not only work on Arduino boards, this may be used on an ESP32 board (for example) as well, as long as you include the Arduino framework. <br />
 
 A list of functions that the library provides: <br />
 - setVCC(NUM)
