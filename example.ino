@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <TMP.h>
-
+//TMP36 tmp {5000, A0}; <- Initializing with constructor. setVCC and setPort will not be needed unless you want them changed later on.
 TMP36 tmp;
 
 void setup() {
