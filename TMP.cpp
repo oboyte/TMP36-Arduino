@@ -43,11 +43,11 @@ int TMP36::getReading() {
 }
 
 //Get the voltage measured
-int TMP36::getVoltage() {
+float TMP36::getVoltage() {
 
     int reading = TMP36::getReading();
 
-    int volt { reading * (m_vcc / 1024) };
+    float volt { (float)reading * ((float)m_vcc / 1024.f) };
 
     m_voltage = volt;
 
