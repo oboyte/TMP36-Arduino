@@ -1,6 +1,6 @@
 #include "TMP.h"
 
-TMP36::TMP36(int vcc=0, int analogPort = 0)
+TMP36::TMP36(int vcc, uint8_t analogPort)
     : m_vcc { vcc }, m_analogPort { analogPort }
 {
 }
@@ -59,7 +59,7 @@ float TMP36::getTemperature() {
 
     int voltage = TMP36::getVoltage();
     
-    float temperature { (voltage - 500) / 10 };
+    float temperature { ((float)voltage - 500) / 10 };
     
     m_temperature = temperature;
     
