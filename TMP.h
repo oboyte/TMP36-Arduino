@@ -9,7 +9,7 @@ private:
     int m_vcc { };
     uint8_t m_analogPort { };
     float m_temperature { };
-    int m_voltage { };
+    float m_voltage { };
     int m_reading;
 
 
@@ -39,7 +39,7 @@ public:
     int getReading();
 
     //Returns the voltage measured.
-    int getVoltage();
+    float getVoltage();
 
     //Returns the temperature. 
     float getTemperature();
