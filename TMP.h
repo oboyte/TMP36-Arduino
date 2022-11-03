@@ -15,7 +15,7 @@ private:
 
 public:
     //Constructor
-    TMP36(int vcc=0, int analogPort = 0);
+    TMP36(int vcc=0, uint8_t analogPort = 0);
 
 
 
