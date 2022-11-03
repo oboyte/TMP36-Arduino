@@ -1,24 +1,24 @@
 #include <Arduino.h>
-#include "TMP.h"
+#include <TMP.h>
 
-TMP36 tempSensor;
-
+TMP36 tmp;
 
 void setup() {
-  // put your setup code here, to run once:
-  tempSensor.setVCC(5000); //This example runs on Arduino Uno, so the VCC will be 5 volts.
-  tempSensor.setPort(A0); //Tells the microcontroller that the reading will be on A0.
+  Serial.begin(9600);
+  tmp.setVCC(5000); //Tells microcontroller that it is a 5V vcc circuit. This example was in Arduino UNO, if you use a board that uses 3.3V, type instead 3300.
+  tmp.setPort(A0); //Tells microcontroller to check Analog 0 port for the temp sensor readings. 
+
 }
 
 void loop() {
-  int reading = tempSensor.getReading();
-  int voltage = tempSensor.getVoltage();
-  float temperature = tempSensor.getTemperature();
+  int reading = tmp.getReading(); // Returns raw data the temperatur sensor sends, stores it in reading variable. 
+  int voltage = tmp.getVoltage(); // Transforms the raw data into voltage.
+  float temperature = tmp.getTemperature(); // Transforms the voltage into temperature.
   
 
-  Serial.println("Reading is: "); Serial.print( reading );
-  Serial.println("Voltage is: "); Serial.print( voltage );
-  Serial.println("Temperature is: "); Serial.print( temperature );
-
-
+  Serial.print("Reading is: "); Serial.println( reading );
+  Serial.print("Voltage is: "); Serial.println( voltage );
+  Serial.print("Temperature is: "); Serial.println( temperature );
+  delay(1000);
+  
 }
