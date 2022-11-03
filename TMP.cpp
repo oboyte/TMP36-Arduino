@@ -57,9 +57,9 @@ float TMP36::getVoltage() {
 //Get the temperature measured. 
 float TMP36::getTemperature() {
 
-    int voltage = TMP36::getVoltage();
+    float voltage = TMP36::getVoltage();
     
-    float temperature { ((float)voltage - 500) / 10 };
+    float temperature { (voltage - 500.f) / 10.f };
     
     m_temperature = temperature;
     
