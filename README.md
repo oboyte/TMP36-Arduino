@@ -4,7 +4,7 @@ This is a simple library used to simplify retrieving data from the TMP36 tempera
 This does not only work on Arduino boards, this may be used on an ESP32 board (for example) as well, as long as you include the Arduino framework. <br />
 
 A list of functions that the library provides: <br />
-- <sub>setVCC(NUM)</sub>
+- `setVCC(NUM)`
     - Tells the object what voltage the VCC uses. This is very important to use after first initializing the object. Alternatively you could use the constructor for more advanced users. NOTE!! You have to set it in millivolts, so for 5v, you type in 5000. If you are stupid and set it to a number below 10, then there is a check in the function that will multiply it with 1000, however use millivolts as thats what the library is designed to use. 
 
 - getVCC()
